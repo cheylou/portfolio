@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 2</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f2f2f2;
+    }
+
+    .profile {
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .profile h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .profile p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    #btn-aboutme {
+      background-color: chocolate;
+      color: wheat;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    #btn-aboutme:hover {
+      background-color: coral;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    #info {
+      margin-top: 15px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <img src="https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/557737696_852984107177202_721205436485443920_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeElPHofkgPxamYf8N6lLnBUSS2Bi_veRM1JLYGL-95Eze2q0DKcG8_gE-8sdZb9aBJRtx4I2D9mteYcHPhW8Wn5&_nc_ohc=hXfnh7kkVCcQ7kNvwFmatMx&_nc_oc=AdloPimAPSZIK4Xs7qltnNptc8YIHU910TxQhS_0JoVxrt6FdV8kGlZgQF82a-YyV-M&_nc_zt=23&_nc_ht=scontent.fdvo2-1.fna&_nc_gid=0wJSxRSkQX8E4-5XecygeQ&oh=00_AffKWwVlq1F69Rtrr3873XHjoRQm-9UHqfVZ00tUbTbHzA&oe=68F3E9EA"Profile Image">
+    <h1>Cherry lou Saligumba</h1>
+    <p>JUST DO YOUR BEST.</p>
+
+    <button id="btn-aboutme">ABOUT ME</button>
+
+    <div id="info" class="hide">
+      <p>I am a self made programmer. My passion runs through my blood.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btnAboutme = document.getElementById("btn-aboutme");
+      const divAboutme = document.getElementById("info");
+
+      btnAboutme.addEventListener("click", function () {
+        if (divAboutme.classList.contains("hide")) {
+          divAboutme.classList.remove("hide");
+          btnAboutme.textContent = "Show Less";
+        } else {
+          divAboutme.classList.add("hide");
+          btnAboutme.textContent = "ABOUT ME";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
